@@ -1,0 +1,29 @@
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*service-account*.json
+*-key.json
+
+# Large source data
+*.parquet
+*.csv
+
+# Logs
+logs/
+*.log
+
+# macOS and IDE files
+.DS_Store
+.idea/
