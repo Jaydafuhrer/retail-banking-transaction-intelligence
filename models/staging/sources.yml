@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: banking_raw
+    database: chatbox-bba2a
+    schema: raw_banking_data
+
+    tables:
+      - name: transactions_raw

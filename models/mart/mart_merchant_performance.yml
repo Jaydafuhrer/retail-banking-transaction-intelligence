@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: mart_merchant_performance
+    description: >
+      Merchant-level and merchant-category analysis of
+      transaction volumes, values, outcomes and fraud exposure.
+
+    columns:
+      - name: merchant_category_code
+        data_tests:
+          - not_null
+
+      - name: total_transactions
+        data_tests:
+          - not_null
+
+      - name: successful_transactions
+        data_tests:
+          - not_null
+
+      - name: fraudulent_transactions
+        data_tests:
+          - not_null
+
+      - name: fraud_rate
+        data_tests:
+          - not_null
+
