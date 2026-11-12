@@ -1,0 +1,26 @@
+
+version: 2
+
+models:
+  - name: mart_customer_activity
+    description: >
+      Customer-level summary of transaction activity,
+      transaction outcomes, channel usage and fraud exposure.
+
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_transactions
+        data_tests:
+          - not_null
+
+      - name: active_days
+        data_tests:
+          - not_null
+
+      - name: fraud_rate
+        data_tests:
+          - not_null

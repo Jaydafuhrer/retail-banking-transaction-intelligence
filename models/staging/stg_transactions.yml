@@ -1,0 +1,23 @@
+
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned staging model for retail banking transactions."
+
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: account_id
+        description: "Identifier of the account involved in the transaction."
+        data_tests:
+          - not_null
+
+      - name: customer_id
+        description: "Identifier of the customer involved in the transaction."
+        data_tests:
+          - not_null

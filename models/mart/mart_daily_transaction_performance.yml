@@ -1,0 +1,51 @@
+
+version: 2
+
+models:
+  - name: mart_daily_transaction_performance
+    description: >
+      Daily banking transaction performance aggregated by
+      transaction date, channel and transaction type.
+
+    columns:
+      - name: transaction_date
+        description: Transaction date in Nigerian local time.
+        data_tests:
+          - not_null
+
+      - name: channel
+        description: Channel through which the transaction was initiated.
+        data_tests:
+          - not_null
+
+      - name: transaction_type
+        description: Debit or credit transaction.
+        data_tests:
+          - not_null
+
+      - name: total_transactions
+        description: Total number of transactions in the group.
+
+      - name: successful_transactions
+        description: Number of successful transactions.
+
+      - name: failed_transactions
+        description: Number of failed transactions.
+
+      - name: reversed_transactions
+        description: Number of reversed transactions.
+
+      - name: pending_transactions
+        description: Number of pending transactions.
+
+      - name: total_attempted_value_ngn
+        description: Total recorded value of all transactions in the group.
+
+      - name: successful_transaction_value_ngn
+        description: Total value of successful transactions.
+
+      - name: average_successful_transaction_value_ngn
+        description: Average value of successful transactions.
+
+      - name: fraudulent_transactions
+        description: Number of transactions flagged as fraudulent.

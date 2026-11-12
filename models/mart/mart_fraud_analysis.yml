@@ -1,0 +1,33 @@
+
+version: 2
+
+models:
+  - name: mart_fraud_analysis
+    description: >
+      Fraud analysis aggregated by transaction date,
+      channel, transaction type, state and merchant category.
+
+    columns:
+      - name: transaction_date
+        data_tests:
+          - not_null
+
+      - name: channel
+        data_tests:
+          - not_null
+
+      - name: transaction_type
+        data_tests:
+          - not_null
+
+      - name: total_transactions
+        data_tests:
+          - not_null
+
+      - name: fraudulent_transactions
+        data_tests:
+          - not_null
+
+      - name: fraud_rate
+        data_tests:
+          - not_null

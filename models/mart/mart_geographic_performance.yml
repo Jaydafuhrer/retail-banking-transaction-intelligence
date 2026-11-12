@@ -1,0 +1,29 @@
+
+version: 2
+
+models:
+  - name: mart_geographic_performance
+    description: >
+      Geographic analysis of transaction activity,
+      customer reach, transaction outcomes and fraud exposure.
+
+    columns:
+      - name: location_state
+        data_tests:
+          - not_null
+
+      - name: location_lga
+        data_tests:
+          - not_null
+
+      - name: total_transactions
+        data_tests:
+          - not_null
+
+      - name: fraudulent_transactions
+        data_tests:
+          - not_null
+
+      - name: fraud_rate
+        data_tests:
+          - not_null
